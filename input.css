@@ -39,3 +39,104 @@
         background-position: center;
     }
 }
+
+/* hamburger menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.5s;
+    transform: rotate(0);
+}
+
+.hamburger-middle {
+    transform: translateY(7px);
+    /* move it down with 7px (if we need to move it up we can use negative -7px) */
+}
+
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.hamburger.open {
+    transform: rotate(90deg);
+}
+
+.hamburger.open .hamburger-top {
+    transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+.hamburger.open .hamburger-middle {
+    display: none;
+}
+
+.hamburger.open .hamburger-bottom {
+    transform: rotate(-45deg) translateX(-6px) translateY(6px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .hamburger {
+    @apply flex flex-col justify-between w-8 h-6;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    @apply block h-1 bg-white duration-200 ease-in-out;
+}
+
+.hamburger-top {
+    @apply w-8;
+}
+
+.hamburger-middle {
+    @apply w-8;
+}
+
+.hamburger-bottom {
+    @apply w-8;
+}
+
+.hamburger-active .hamburger-top {
+    @apply transform rotate-45 translate-y-2.5;
+}
+
+.hamburger-active .hamburger-middle {
+    @apply opacity-0;
+}
+
+.hamburger-active .hamburger-bottom {
+    @apply transform rotate-45 -translate-y-2.5;
+}
+
+@layer utilities {
+    .hamburger-active {
+        @apply;
+    }
+} */
